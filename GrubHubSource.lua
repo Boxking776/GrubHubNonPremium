@@ -43,7 +43,7 @@ local uiParent = game:GetService("RunService"):IsStudio() and game:GetService("P
             buttonColor = _G.buttonColor;
             buttonOutlineColor = _G.buttonOutlineColor;
             buttonOutlineSize = _G.buttonOutlineSize;
-            buttonHoverEnabled = false;
+            buttonHoverEnabled = true;
             buttonModal = true;
             defaultColorPickerColor = Color3.fromRGB(255, 255, 255);
             sliderColor = _G.sliderColor;
@@ -58,7 +58,7 @@ local uiParent = game:GetService("RunService"):IsStudio() and game:GetService("P
             buttonColor = Color3.fromRGB(35, 35, 35);
             buttonOutlineColor = Color3.fromRGB(50, 50, 50);
             buttonOutlineSize = 1;
-            buttonHoverEnabled = false;
+            buttonHoverEnabled = true;
             buttonModal = true;
             defaultColorPickerColor = Color3.fromRGB(255, 255, 255);
             sliderColor = Color3.new(0.0862745, 0.0862745, 0.0862745);
@@ -564,8 +564,8 @@ local uiParent = game:GetService("RunService"):IsStudio() and game:GetService("P
                 
                 if library.ColorPicker and library.ColorPicker ~= Container then
                     
-                    library.ColorPicker.Visible = true;
-                    library.ColorPickerToggle = true;
+                    library.ColorPicker.Visible = false;
+                    library.ColorPickerToggle = false;
                 end;
 
                 library.ColorPickerToggle = not library.ColorPickerToggle;
@@ -601,7 +601,7 @@ local uiParent = game:GetService("RunService"):IsStudio() and game:GetService("P
                         liveColor.Text = 'R: '..tostring(math.floor(Color.R * 255))..' G: '..tostring(math.floor(Color.G * 255))..' B: '..tostring(math.floor(Color.B * 255))
                         Current_Color = Color;
                     end;
-                    library.ColorPickerToggle = true;
+                    library.ColorPickerToggle = false;
                     library.ColorPicker = nil;
                     
                     callback(Current_Color);
