@@ -1,0 +1,3 @@
+game.CoreGui.Library.MainFrame.BackgroundColor3 = MainColor
+wait()
+game.CoreGui.Library.MainFrame.LeftFrame.BackgroundColor3 = SecondaryColor
