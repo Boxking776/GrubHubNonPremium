@@ -1,0 +1,24 @@
+local MainColor = Color3.new(14, 72, 23) --Valid LUA Color
+local SecondaryColor = Color3.new(28, 45, 38) --Valid LUA Color
+local MainImage = 'rbxassetid://5377725963' --Valid Image ID
+local LeftFrameImage = 'rbxassetid://5586301242' --LeftFrame Color (If leftframe is visible)
+local TransparentLeftFrame = false --I would recommend making this true, unless you want it to be a solid color.
+
+----------------------------------------------------------------------------------
+
+game.CoreGui.Library.MainFrame.BackgroundColor3 = MainColor
+wait()
+game.CoreGui.Library.MainFrame.LeftFrame.BackgroundColor3 = SecondaryColor
+wait()
+game.CoreGui.Library.MainFrame.Image = MainImage
+wait()
+game.CoreGui.Library.MainFrame.LeftFrame.Image = LeftFrameImage
+wait()
+
+if TransparentLeftFrame == true then
+game.CoreGui.Library.MainFrame.LeftFrame.BackgroundTransparency = 1
+else
+game.CoreGui.Library.MainFrame.LeftFrame.BackgroundTransparency = 0
+end
+
+----------------------------------------------------------------------------------
